@@ -1,0 +1,295 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:100,300,400,700);
+@import url(//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
+
+/*Styling for Bloodbank page*/
+.heading1{
+    color: red;
+    text-align: center;
+}
+
+
+/*Styling for images*/
+.imgnavbar{
+    height: 5rem;
+    width: 8rem;
+}
+
+.navbar-brand{
+    width: 6rem;
+}
+
+.imgregister{
+    height: 100%;
+}
+
+/*Styling for cards*/
+.indexcard{
+    width: 35rem;
+    margin-top: 2rem;
+}
+
+.donorcard{
+    width: 50rem;
+    margin-top: 2rem;
+    margin-left: 9.5rem;
+}
+
+/*Styling for borders*/
+.about{
+    border-right: 1px solid red;
+    height: 100%;
+    font-size: 15px;
+}
+
+/*Styling for buttons*/
+.hmregbtn{
+    margin-left: 1rem;
+    padding: 2rem;
+    margin-top: 1rem;
+}
+
+.regbtn{
+    width: 13rem;
+    height: 3rem;
+    background-color: #f1bc31;
+}
+
+.log{
+    margin-left: 6rem;
+}
+
+.proftbtn{
+    width: 10rem;
+    height: 3rem;
+    background-color:#b22222;
+    margin-left: 3rem;
+}
+
+.btnviewdonor{
+    margin-top: 1rem;
+    width: 20rem;
+    height: 2rem;
+    background-color: #f1bc31;
+}
+
+.btncontact{
+    margin-top: 0rem;
+    width: 4rem;
+    height: 2rem;
+    background-color: #f1bc31;
+}
+
+
+/*Styling for forms*/
+.contactfm{
+    margin-top: 2rem;
+    width: 35rem;
+    margin-left: 22rem;
+    font-family: 'Open Sans';
+}
+
+.label1{
+    color: black;
+}
+
+.formgrp{
+    padding: 5px;
+    box-sizing: border-box;
+    
+}
+
+/*Styling for tables*/
+.donortable{
+    display: block;
+    margin-top: 2rem;
+    table-layout: fixed;
+    width: 100%;
+}
+
+.hosptbl{
+    display: block;
+    margin-top: 2rem;
+    table-layout: fixed;
+    width: 100%;
+}
+/*
+.hosptbl thead {
+    display: block;
+}
+
+.hosptbl tbody{
+    display:block;
+    overflow:auto;
+    height:25rem;
+}
+
+.hosptbl th{
+    
+    text-align: left;
+}
+
+.hosptbl td{
+    padding: 10px;
+}
+
+#head0{padding-left: 10px;}
+#head1{padding-left: 12px;}
+#head2{padding-left: 32px;}
+#head3{padding-left: 10px;}
+#head4{padding-left: 55px;}
+#head5{padding-left: 137px;}
+#head6{padding-left: 30px;}
+#head7{padding-left: 30px;}
+#head8{padding-left: 25px;}
+#head9{padding-left: 30px;}
+#head10{padding-left: 14px;}
+#head11{padding-left: 18px;}
+#head12{padding-left: 22px;}
+#head13{padding-left: 34px;}*/
+
+
+/*Styling for register and login page*/
+.register{
+    height: 35rem;
+    margin: 1.5rem;
+}
+
+.regform{
+    font-family: 'Open Sans';
+    font-weight: 100;
+    display: flex;
+    overflow: hidden;
+}
+
+.register-form {
+    background: #222;
+    box-shadow: 0 0 1rem rgba(0,0,0,0.3);
+    min-height: 30rem;
+    margin: auto;
+    max-width: 55%;
+    padding: .5rem;
+  }
+
+.login-form{
+    background: #222;
+    box-shadow: 0 0 1rem rgba(0,0,0,0.3);
+    min-height: 18rem;
+    margin: auto;
+    max-width: 55%;
+    padding: .5rem;
+}
+
+.imgfrm{
+    width: 50%;
+}
+
+.register-forgot-pass{
+    bottom: 0;
+    color: #fff;
+    font-weight: bold;
+    font-size: 75%;
+    left: 0;
+    opacity: 0.6;
+    padding: .5rem;
+    position: absolute;
+    text-align: center;
+    text-decoration: none;
+    width: 50%;
+    margin-left: 8.3rem;
+    margin-bottom: 5rem;
+}
+
+  .register-text {
+    background: hsl(40,30,60);
+    border-bottom: .5rem solid white;
+    color: white;
+    font-size: 1.5rem;
+    margin: 0 auto;
+    max-width: 50%;
+    padding: .5rem;
+    text-align: center;
+  }
+
+  .register-username, .register-password {
+    background: transparent;
+    border: 0 solid;
+    border-bottom: 1px solid rgba(white, .5);
+    color: white;
+    display: block;
+    margin: 1rem;
+    padding: .5rem;
+    transition: 250ms ease-in;
+    width: calc(100% - 3rem);
+  }
+
+  .form-check-input{
+    margin-left: 1rem;
+}
+
+  .form-check-label{
+    color: white;
+    margin-left: 2rem;
+  }
+
+  .forgot-pass{
+    bottom: 0;
+    color: #fff;
+    font-weight: bold;
+    font-size: 75%;
+    left: 0;
+    opacity: 0.6;
+    padding: .5rem;
+    position: absolute;
+    text-align: center;
+    text-decoration: none;
+    width: 50%;
+    margin-left: 8.3rem;
+    margin-bottom: 9rem;
+  }
+
+.register-pass{
+    bottom: 0;
+    color: #fff;
+    font-weight: bold;
+    font-size: 75%;
+    left: 0;
+    opacity: 0.6;
+    padding: .5rem;
+    position: absolute;
+    text-align: center;
+    text-decoration: none;
+    width: 50%;
+    margin-left: 8.3rem;
+    margin-bottom: 11rem;
+  }
+
+  .register-submit {
+    border: 1px solid white;
+    background: transparent;
+    color: white;
+    display: block;
+    margin: 1rem auto;
+    min-width: 1px;
+    padding: .25rem;
+    transition: 250ms ease-in;
+  }
+  
+.message{
+    color: white;
+}
+
+.logoutlink{
+    margin-left: 20rem;
+    color: grey;
+}
+
+#Hello{
+    color: grey;
+    margin-right: -20rem;
+}
+
+.passwordreset{
+    margin-left: 25rem;
+    margin-top: 2rem;
+    padding: 2px;
+}

@@ -1,0 +1,1 @@
+web: gunicorn BloodBank.wsgi --log-file -
