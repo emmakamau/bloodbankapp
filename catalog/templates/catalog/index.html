@@ -1,0 +1,71 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+
+<div class="container">
+    <div class="row ">
+        <div class="col-sm-6 about"><br>
+            <p>
+                Each year, thousands of people rely on receiving donated blood and 
+                blood products to stay alive. Certain injuries and illnesses can 
+                quickly cause a person’s blood levels to drop. Without enough blood,
+                they will not receive enough oxygen in their body, resulting in death. 
+                Many hospitals and medical centers utilize donated blood to save the lives of 
+                their patients.
+            </p> 
+            <p>
+                However many people do not voluntarily donate blood to the national blood 
+                banks and as such hospitals often have to rely on family replacement donors, 
+                who donate blood for their kin in need, to replace the one used up from the 
+                hospital’s blood bank.
+            </p>
+            <p>
+                In Kenya for example, according to the Kenya National Blood Transfusion 
+                Service (de. such donors account for about 20,000 units of blood collected 
+                by public hospitals every year which is below the 500,000 unit’s required.
+                60 per cent of the donated blood is used up by mothers and their children 
+                for birth-related needs before or after childbirth including Caesarian sections, 
+                which now account for half the births in both private and public hospitals.
+            </p>
+            <p>
+                The main aim of developing this system is to assist victims who need blood 
+                donations especially on emergency basis and for rare blood group types that 
+                have few donors. The system also seeks to increase public awareness and 
+                willingness to donate blood by establishing linkages between the health system, 
+                national blood bank and internet users.
+            </p>
+        </div>
+        <div class="col-sm-6">
+            <div class="card indexcard">
+                <div class="card-header">
+                Available Donors
+                </div>
+                <table class="table table-striped">
+                    <thead>
+                      <tr>
+                        <th scope="col">DonorID</th>
+                        <th scope="col">Location</th>
+                        <th scope="col">BloodGroup</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                        {% for donor in donors %}
+                      <tr>
+                        <td>{{donor.donorid}}</td>
+                        <td>{{donor.location}}</td>
+                        <td>{{donor.bloodgroup}}</td>
+                      </tr>
+                        {% endfor %}
+                    </tbody>
+                  </table>
+            </div>
+            <div class= "hmregbtn">
+                <a class="btn btn-lg regbtn" href="{% url 'registerhosp' %}">Hospital Registration</a>
+                <a class="btn btn-lg regbtn" href="{% url 'registerdonor' %}">Donor Registration</a><br><br>
+                <div class="log">Already have an account?<a href="{% url 'login' %}">Login</a></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

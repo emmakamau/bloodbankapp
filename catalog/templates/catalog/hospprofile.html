@@ -1,0 +1,87 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        
+        <!--Hospital table-->
+        <div class="col-sm-12">
+            <form class="hospprofile" method="POST">
+                <h3 class="heading1">Always Keep the BloodBank updated</h3><br>
+                {% csrf_token %}
+                <table class="table table-borderless">
+                    <tr>
+                        <td>
+                            <table class="table table-borderless">
+                                <tr>
+                                    <td><label class="label1">{{ form.name.label}}:</label></td>
+                                    <td>{{ form.name }}</td>
+                                </tr>
+                                <tr>
+                                    <td><label class="label1">{{ form.email.label}}:</label></td>
+                                    <td>{{ form.email }}</td>
+                                </tr>
+                                <tr>
+                                    <td><label class="label1">{{ form.contact.label}}:</label></td>
+                                    <td>{{ form.contact }}</td>
+                                </tr>
+                                <tr>
+                                    <td><label class="label1">{{ form.location.label}}</label></td>
+                                    <td>{{ form.location }}</td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td>
+                            <table class="table table-borderless">
+                                <tr>
+                                    <td><label class="label1">BloodGroup A+:</label></td>
+                                    <td>{{ form.Apositive }}</td>
+                                </tr>
+                                <tr>
+                                    <td><label class="label1">BloodGroup A-:</label></td>
+                                    <td>{{ form.Anegative }}</td>
+                                </tr>
+                                <tr>
+                                    <td><label class="label1">BloodGroup B+:</label></td>
+                                    <td>{{ form.Bpositive }}</td>
+                                </tr>
+                                <tr>
+                                    <td><label class="label1">BloodGroup B-:</label></td>
+                                    <td>{{ form.Bnegative }}</td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td>
+                            <table class="table table-borderless">
+                                <tr>
+                                    <td><label class="label1">BloodGroup AB+:</label></td>
+                                    <td>{{ form.ABpositive }}</td>
+                                </tr>
+                                <tr>
+                                    <td><label class="label1">BloodGroup AB-:</label></td>
+                                    <td>{{ form.ABnegative }}</td>
+                                </tr>
+                                <tr>
+                                    <td><label class="label1">BloodGroup O+:</label></td>
+                                    <td>{{ form.Opositive }}</td>
+                                </tr>
+                                <tr>
+                                    <td><label class="label1">BloodGroup O-:</label></td>
+                                    <td>{{ form.Onegative }}</td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>  
+                </table>
+                <button type="submit" class="btn btn-primary bloodbankbtn">Submit</button>
+            </form>
+        </div>
+        
+    </div>
+</div>
+
+
+{% endblock %}
+
+

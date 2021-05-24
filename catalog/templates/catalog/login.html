@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="shortcut icon" href="#">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <!-- Bootstrap Scripts -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  
+  <!-- Add additional CSS and JS in static file -->
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'catalog/styles.css' %}">
+  <!--<script type="text/javascript" src="{% static '/catalog/app.js' %}"></script>-->
+    
+  <title>
+    {% block title %}{% endblock %}
+  </title>
+
+</head>
+<body>
+
+{% block content %}
+
+<div class="container">
+    <div class="row register">
+        <!--Register background image-->
+        <div class="col-sm-6 about">
+            <img src="{% static 'register.jpg' %}" class="rounded float-left imgregister" alt="...">
+        </div>
+
+        <!--Registration Form-->
+        <div class="col-sm-6 regform">
+
+            <form class="login-form" method="POST" action="">
+                {% csrf_token %}
+            
+                <input type="text" name="username" class="register-username" autofocus="true" required="true" placeholder="Username" />
+                <input type="password" name="password" class="register-password" required="true" placeholder="Password" />
+                        {% for message in messages%}
+                            <p class="message">{{message}}</p> 
+                        {% endfor %}
+                <input type="submit" name="Login" value="Login" class="register-submit"/><br>
+            </form>
+
+            <p>
+            <a href="{% url 'home' %}" class="register-pass">Register</a>
+            <a href="{% url 'reset_password' %}" class="forgot-pass">Reset password</a>
+            </p>
+            
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
+	
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        <!--Contact Form-->
+        <div class="col-sm-3">
+            <form class="contactfm" method="POST">
+                <h3>Schedule for Blood Donation</h3>
+                {% csrf_token %}
+        
+                    <table>
+                        <tr>
+                            <td class="formgrp">My Email: </td>
+                            <td class="formgrp">{{ form.from_email }}</td>
+                        </tr>
+                        <tr>
+                            <td class="formgrp">Hospital Email: </td>
+                            <td class="formgrp">{{ form.recipient_list }}</td>
+                        </tr>
+                        <tr>
+                            <td class="formgrp">Date Available: </td>
+                            <td>
+                                <div class="input-group date" id="datetimepicker1" data-target-input="nearest">
+                                    {{ form.date }}
+                                    <div class="input-group-append" data-target="#datetimepicker1" data-toggle="datetimepicker">
+                                      <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="formgrp">Message: </td>
+                            <td class="formgrp">{{ form.message }}</td>
+                        </tr>
+                        
+                    </table>
+        
+                <button type="submit" class="btn btn-primary contactbtn">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% block javascript %}
+<script>
+    $(function () {
+      $("#datetimepicker1").datetimepicker({
+        format: 'DD/MM/YYYY HH:mm',
+      });
+    });
+  </script>
+
+{% endblock %}
+
+{% endblock %}

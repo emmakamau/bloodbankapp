@@ -1,0 +1,72 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        <!--Hospital table-->
+        <div class="col-sm-8 about">
+            <h3>A little bit of housekeeping</h3>
+            <p>
+                Before donating, there are some basic requirements that all donors must meet.
+                Eligible donors will need to:
+            </p>
+            <li>If you have received the COVID vaccine, please wait 3 days before attempting to donate</li>
+            <li>Be at least 17 years old*</li>
+            <li>Weigh at least 110 pounds</li>
+            <li>Be in good health generally and feel well on the day of donation</li>
+            <li>Bring a current photo ID on the day of donation</li><br>
+            <p>Common Reasons People Can't Donate</p>
+            <li>Are taking antibiotics for an infection (antibiotics for treating acne are fine)</li>
+            <li>Are currently taking Cellcept or have taken Cellcept in the last 6 weeks</li>
+            <li>Are currently using Avodart or Jalyn or have taken either in the last 6 months</li>
+            <li>Are taking or have taken HIV Prevention (PrEP and PEP) medications Descovy, Sentress, Tivicay and Truvada in the past 3 months</li>
+            <li>Are taking or ever taken HIV treatment also known as antiretroviral therapy (ART)</li>
+            <li>Have taken Absorica, Accutane, Amnesteem, Claravis, Myorisan, Propecia, Proscar, Sotret, Thalomid, Rinvoq or Zenatane in the past 30 days or are currently taking any of these drugs</li>
+            <li>Are currently taking or have taken Arava, Aubagio, Erivedge or Odomzo in the last 2 years</li>
+            <li>Have taken Soriatane in the past 3 years or taking Soriatane now</li>
+            <li>Have ever taken Tegison</li>
+            <li>Taking a medication that contains aspirin (applies only to platelet donors)</li>
+        </div>
+
+        <div class="col-sm-4">
+            <form class="hospprofile" method="POST">
+                <h2>Create Profile</h2>
+                {% csrf_token %}
+                <div>
+                    <table class="table table-borderless">
+                        <tr>
+                            <td><label class="label1">{{ form.name.label}}:</label></td>
+                            <td>{{ form.name }} </td>
+                        </tr>
+                        <tr>
+                            <td><label class="label1">{{ form.email.label}}:</label></td>
+                            <td>{{ form.email }}</td>
+                        </tr>
+                        <tr>
+                            <td><label class="label1">{{ form.contact.label}}:</label></td>
+                            <td>{{ form.contact }}</td>
+                        </tr>
+                        <tr>
+                            <td><label class="label1">{{ form.location.label}}</label></td>
+                            <td>{{ form.location }}</td>
+                        </tr>
+                        <tr>
+                            <td><label class="label1">{{ form.bloodgroup.label}}</label></td>
+                            <td>{{ form.bloodgroup }}</td>
+                        </tr>
+                        <tr>
+                            <td><label class="label1">{{ form.status.label}}</label></td>
+                            <td>{{ form.status }}</td>
+                        </tr>   
+                    </table>
+                </div>
+                <button type="submit" class="btn btn-primary proftbtn">Submit</button>
+            </form>
+        </div>
+    
+    </div>
+</div>
+
+
+{% endblock %}

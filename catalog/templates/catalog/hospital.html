@@ -1,0 +1,78 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+
+
+<div class="container">
+    <div class="row">
+        <!--Hospital table-->
+        <div class="col-sm-12 ">
+            <div>
+                {% for hospital in hospitals %}
+                    {% if hospital.name == user.username %}
+                        <a class="btn btn-sm btnviewdonor" href="{% url 'donorlist' %}">Click to View available Donors</a>
+                    {% endif %}
+                {% endfor %}
+            </div>
+            <div class="">
+                <table class="table table-striped hosptbl ">
+                    <thead>
+                        <tr>
+                            <th id="head0">ID</th>
+                            <th id="head1">Name</th>
+                            <th id="head2">Location</th>
+                            <th id="head3">Cell</th>
+                            <th id="head4">Email</th>
+                            <th id="head5">A+</th>
+                            <th id="head6">A-</th>
+                            <th id="head7">B+</th>
+                            <th id="head8">B-</th>
+                            <th id="head9">AB+</th>
+                            <th id="head10">AB-</th>
+                            <th id="head11">O+</th>
+                            <th id="head12">O-</th>
+                            <th id="head13">Contact</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for hospital in hospitals %}
+                        <tr>
+                            <td>{{hospital.hospid}}</td>
+                            <td>{{hospital.name}}</td>
+                            <td>{{hospital.location}}</td>
+                            <td>{{hospital.contact}}</td>
+                            <td>{{hospital.email}}</td>
+                            <td>{{hospital.Apositive}}</td>
+                            <td>{{hospital.Anegative}}</td>
+                            <td>{{hospital.Bpositive}}</td>
+                            <td>{{hospital.Bnegative}}</td>
+                            <td>{{hospital.ABpositive}}</td>
+                            <td>{{hospital.ABnegative}}</td>
+                            <td>{{hospital.Opositive}}</td>
+                            <td>{{hospital.Onegative}}</td>
+                            {% for group in request.user.groups.all %}
+                                {%  if 'Donor' == group.name %}
+                                <td><a class="btn btn-sm btncontact" href="{% url 'scheduledonation' %}">Contact</a></td>
+                                {% endif %}
+                            {% endfor %}
+                            {% for hospital in hospitals %}
+                                {% if hospital.name == user.username %}
+                                <td><a class="btn btn-sm btncontact" href="{% url 'contacthosp' %}">Contact</a></td>
+                                {% endif %}
+                            {% endfor %}
+                            
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                  </table>
+            </div>
+            
+              <div>
+               
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

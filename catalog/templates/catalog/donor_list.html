@@ -1,0 +1,46 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="card donorcard">
+                <div class="card-header">
+                Available Donors
+                </div>
+                <table class="table table-striped donortable">
+                    <thead>
+                    <tr>
+                        <th scope="col">DonorID</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Location</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">BloodGroup</th>
+                        <th scope="col">Status</th>
+                        
+                    </tr>
+                    </thead>
+                    <tbody>
+                        {% for donor in donors %}
+                    <tr>
+                        <td>{{donor.donorid}}</td>
+                        <td>{{donor.name}}</td>
+                        <td>{{donor.location}}</td>
+                        <td>{{donor.email}}</td>
+                        <td>{{donor.bloodgroup}}</td>
+                        <td>{{donor.status}}</td>
+                        <td><td><a class="btn btn-sm btncontact" href="{% url 'contactdonor' %}">Contact</a></td></td>
+                    </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            <br>
+        </div>
+        
+    </div>
+</div>
+
+
+{% endblock %}
