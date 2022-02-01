@@ -28,7 +28,7 @@ This tab allows the Hospital to fill in the composition of their blood blanks.
  
 ![ScreenShot](https://raw.github.com/emmakamau/bloodbankapp/master/Screenshots/Hospitalprofile.jpg)
   
-Displays a list of all registered hospitals and the contents of their blood bank.
+Displays a list of all registered hospitals and the contents of their blood bank..
  
 ![ScreenShot](https://raw.github.com/emmakamau/bloodbankapp/master/Screenshots/Hospitallist.jpg)
  
